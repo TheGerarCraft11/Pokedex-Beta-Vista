@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TheGerarCraft11.github.io/Pokedex-Beta-Vista/static/css/main.a79cc694.css",
+    "main.js": "/TheGerarCraft11.github.io/Pokedex-Beta-Vista/static/js/main.440eac4f.js",
+    "index.html": "/TheGerarCraft11.github.io/Pokedex-Beta-Vista/index.html",
+    "main.a79cc694.css.map": "/TheGerarCraft11.github.io/Pokedex-Beta-Vista/static/css/main.a79cc694.css.map",
+    "main.440eac4f.js.map": "/TheGerarCraft11.github.io/Pokedex-Beta-Vista/static/js/main.440eac4f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a79cc694.css",
+    "static/js/main.440eac4f.js"
+  ]
+}
