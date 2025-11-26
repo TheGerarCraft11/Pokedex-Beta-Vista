@@ -1,0 +1,392 @@
+/* 🌗 MODO CLARO (por defecto) */
+body.light {
+  background: #f8f8f8;
+  color: #222;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* 🌙 MODO OSCURO */
+body.dark {
+  background: #121212;
+  color: #eee;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* 📦 Contenedor principal */
+.pokedex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 40px;
+  transition: all 0.4s ease;
+}
+
+/* 🔴 Paneles laterales */
+.pokedex-izquierda,
+.pokedex-derecha {
+  background: var(--panel-bg, #b00000);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #333;
+  transition: all 0.4s ease;
+}
+
+/* 🖥 Pantallas */
+.pantalla,
+.pantalla-secundaria {
+  background: var(--screen-bg, #e0e0e0);
+  border-radius: 10px;
+  padding: 10px;
+  height: 350px;
+  overflow-y: auto;
+  transition: all 0.4s ease;
+}
+
+/* 🧩 Lista de Pokémon */
+.poke-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.poke-item {
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.poke-item:hover {
+  transform: scale(1.08);
+}
+
+.poke-item img {
+  width: 70px;
+  height: 70px;
+}
+
+/* 🧠 Botones */
+.boton {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.boton:hover {
+  transform: scale(1.05);
+}
+
+.boton-rojo {
+  background: #ff5252;
+}
+
+.boton-azul {
+  background: #007bff;
+}
+
+/* 🔍 Buscador */
+.search-bar {
+  margin: 10px 0;
+}
+
+.search-bar input {
+  padding: 5px;
+  width: 70%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ➕➖ Botones de agregar y eliminar */
+.add {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  margin-right: 10px;
+}
+
+.delete {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+}
+
+/* 🎠 Carrusel */
+.poke-carousel {
+  position: relative;
+  background: #d00000;
+  border-radius: 12px;
+  padding: 10px;
+  width: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carousel-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, border 0.3s;
+  border: 2px solid transparent;
+}
+
+.carousel-img:hover {
+  transform: scale(1.1);
+  border-color: #ffd600;
+}
+
+/* ⬅➡ Flechas del carrusel */
+.boton-carousel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  color: #d00000;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  z-index: 2;
+}
+
+.boton-carousel:hover {
+  background: #ffd600;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.boton-carousel.izquierda {
+  left: 6px;
+}
+
+.boton-carousel.derecha {
+  right: 6px;
+}
+
+/* 🧰 Panel de personalización */
+.customizer {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 250px;
+  transition: all 0.3s;
+}
+
+.customizer h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.customizer label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* 🎨 Entradas */
+.customizer input[type="color"],
+.customizer select,
+.customizer input[type="range"] {
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.customizer input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* 🆕 Selector de fuente */
+.customizer select.font-select {
+  border-radius: 6px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.customizer select.font-select:hover {
+  background: #f0f0f0;
+}
+
+body.dark .customizer select.font-select {
+  background: #2a2a2a;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+/* 🌙 Tema oscuro aplicado */
+body.dark .pokedex-izquierda,
+body.dark .pokedex-derecha {
+  background: #222;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .pantalla,
+body.dark .pantalla-secundaria {
+  background: #1b1b1b;
+  color: #eee;
+}
+
+body.dark .boton-rojo {
+  background: #ff3b3b;
+}
+
+body.dark .boton-azul {
+  background: #0099ff;
+}
+
+body.dark .poke-carousel {
+  background: #333;
+}
+
+body.dark .customizer {
+  background: #2a2a2a;
+  color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+/* 🌗 Botón de cambio de tema */
+.theme-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.theme-toggle button {
+  background: #ffcc00;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body.dark .theme-toggle button {
+  background: #444;
+  color: #fff;
+}
+
+/* 📱 Contenedor tarjeta + customizer */
+.tarjeta-con-customizer {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 8px;
+  transition: all 0.25s ease;
+}
+
+/* 🧩 Área donde está la tarjeta y botones */
+.tarjeta-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ✏️ Botón para modificar la tarjeta */
+.boton.modificar-tarjeta {
+  background: #007bff;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.boton.modificar-tarjeta:hover {
+  transform: translateY(-3px);
+}
+
+/* 🪄 Área del customizer */
+.customizer-area {
+  min-width: 260px;
+  max-width: 360px;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.customizer-area.hidden {
+  opacity: 0;
+  transform: translateX(10px) scale(0.98);
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+
+.customizer-area.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  pointer-events: auto;
+}
+
+/* ✨ Ajustes dentro del customizer */
+.customizer {
+  width: 100%;
+  background: var(--customizer-bg, #fff);
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* 🧹 Botón restablecer */
+.boton.boton-rojo {
+  background: #ff5252;
+  color: #fff;
+}
+
+/* 💬 Texto cuando no hay Pokémon seleccionado */
+.texto-pantalla {
+  text-align: center;
+  color: rgba(0,0,0,0.6);
+  padding: 30px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 880px) {
+  .tarjeta-con-customizer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .customizer-area {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+/* ✅ Fuentes base */
+body {
+  font-family: 'Poppins', sans-serif;
+}
