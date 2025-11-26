@@ -2,7 +2,9 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mipokedex.infinityfreeapp.com/pokedex",
+  
+
+  "homepage": "https://thegerarcraft11.github.io/Pokedex-Beta-Vista",
   "dependencies": {
     "@testing-library/react": "^16.3.0",
     "bootstrap": "^5.3.8",
@@ -13,6 +15,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+
+    "predeply": "npm run build",
+    
+    "deploy": "gh-pages -d build",
+
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -29,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
